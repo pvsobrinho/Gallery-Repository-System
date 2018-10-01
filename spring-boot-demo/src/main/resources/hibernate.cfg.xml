@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <mapping package="com.avenueCode.entity"/>
+
+    <mapping class="com.avenueCode.entity.Product"/>
+    <mapping class="com.avenueCode.entity.Picture"/>
+ 
+
+    <mapping resource="test/animals/orm.xml"/>
+  </session-factory>
+</hibernate-configuration>

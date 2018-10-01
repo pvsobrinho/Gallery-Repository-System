@@ -1,0 +1,19 @@
+package com.avenueCode.dao;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.avenueCode.entity.Product;
+@Transactional
+@Repository
+public class PictureDAO implements IPictureDAO {
+	@PersistenceContext	
+	private EntityManager entityManager;	
+	@Override
+	public Product getProductById(int productId) {
+		return entityManager.find(Product.class, productId);
+	}
